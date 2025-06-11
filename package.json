@@ -16,7 +16,8 @@
   },
   "license": "Apache-2.0",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && npx playwright install chromium --with-deps",
+    "postinstall": "npx playwright install chromium --with-deps",
     "lint": "npm run update-readme && eslint . && tsc --noEmit",
     "update-readme": "node utils/update-readme.js",
     "watch": "tsc --watch",
